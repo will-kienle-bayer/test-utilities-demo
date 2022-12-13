@@ -31,4 +31,4 @@ jobs:
           dotnet restore TestUtilitiesDemo.Tests/TestUtilitiesDemo.Tests.csproj
           dotnet build --configuration Release TestUtilitiesDemo/TestUtilitiesDemo.csproj
           dotnet build --configuration Release TestUtilitiesDemo.Tests/TestUtilitiesDemo.Tests.csproj
-          dotnet test TestUtilitiesDemo.Tests/TestUtilitiesDemo.Tests.csproj
+          dotnet test --logger trx /p:CollectCoverage=true /p:CoverletOutputFormat=opencover TestUtilitiesDemo.Tests/TestUtilitiesDemo.Tests.csproj
